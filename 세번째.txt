@@ -1,0 +1,26 @@
+abstract class Monster {
+  void attack();
+}
+
+class Goblin implements Monster {
+  @override
+  void attack() {
+    print('고블린 어택');
+  }
+}
+
+class Bat implements Monster {
+  @override
+  void attack() {
+    print('할퀴기 공격!');
+  }
+}
+
+void main() {
+  Goblin g1 = Goblin();
+  Bat b1 = Bat();
+  
+  // 아래의 코드에서 Goblin 또는 Bat이 드러나지 않기 때문에 단순한 코드 전개가 가능하다.
+  List<Monster> monsters = [g1, b1];
+  monsters.forEach((m) => m.attack());
+}

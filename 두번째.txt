@@ -1,0 +1,35 @@
+class Hero {
+  String name = '영웅';
+  
+  void run() {
+    print('뛴다!');
+  }
+}
+
+class SuperHero extends Hero{
+  @override
+  void run() {
+    super.run();
+    this.fly();
+  }
+  
+  void fly() {
+    print('난다!');
+  }
+}
+
+void main() {
+  var h1 = SuperHero();
+  h1.run();
+  // hero.fly;
+  print(h1.name);
+  
+  print('-------');
+  
+  var h2 = Hero();
+  h2.run();
+  
+  print('-------');
+  
+  List<Hero> heroes = [h1, h2];
+  heroes.forEach((h) => h.run());}

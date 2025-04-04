@@ -1,0 +1,18 @@
+void main() {
+  bool promoActive = false;
+  
+  // if(promoActive) {
+  //   print([ 1, 2, 3, 4, 5, 6 ]);
+  // } else {
+  //   print([ 1, 2, 3, 4, 5 ]);
+  // }
+  
+  print([ 1, 2, 3, 4, 5, if (promoActive) 6]);
+  
+  var listOfInts = [ 1, 2, 3 ];
+  var listOfString = [
+    '#0',
+    for(var i in listOfInts) '#$i'
+  ];
+  print(listOfString);
+}

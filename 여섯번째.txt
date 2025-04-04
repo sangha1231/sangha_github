@@ -1,0 +1,9 @@
+Function getFunc(bool isChoice) {
+  return isChoice == true ? () => '왼쪽' : () => '오른쪽';
+}
+
+void main() {
+  var func = getFunc(true);
+  var result = func();
+  print(result);
+}

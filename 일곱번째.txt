@@ -1,0 +1,29 @@
+void main() {
+  var nums = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+  print(nums);
+  print(nums.length);
+  
+  var evenNums = nums
+    .where((n) => n  % 2 == 0)
+    .toList();
+  print(evenNums);
+  
+  var strNums = evenNums
+    .map((n) => '#$n')
+    .toList();
+  print(strNums);
+  
+  var nums2 = [ 1, 2, 3, 3, 3, 4, 5, 6, 6 ];
+  print(nums2);
+  print(nums2.toSet().toList());
+  
+  print(nums2.any((e) => e == 3));
+  
+  nums2
+    ..add(-1)
+    ..add(-2)
+    ..add(-3);
+  
+  print(nums2);
+    
+}

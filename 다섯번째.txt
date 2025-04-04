@@ -1,0 +1,31 @@
+void main() {
+  var lottoNums = [ 5, 6, 11, 13, 17, 21 ];
+  
+  /*
+    lottoNums.forEach((num) {
+    print(num);
+  });
+  
+  lottoNums.forEach((num) => print(num));
+  
+  lottoNums.forEach(print);
+  */
+  
+  /*
+  lottoNums.remove(6);
+  lottoNums.add(9);
+  lottoNums.add(9);
+  
+  print(lottoNums);
+  
+  print(lottoNums[0]);
+  
+  print(lottoNums);
+  */
+  
+  var map = { '한국': '서울', '일본': '도쿄' };
+  print(map['한국']);
+  map['중국'] = '북경';
+  print(map);
+  
+}

@@ -1,0 +1,31 @@
+class Rectangle {
+  num left, top, width, height;
+  
+  Rectangle(this.left, this.top, this.width, this.height);
+  
+  num get right => left + width;
+  set right(num value) => left = value - width;
+  num get bottom => top + width;
+  set bottom(num value) => top = value - height;
+}
+
+class Rectangle2 {
+  num left, top, right, bottom;
+  
+  Rectangle2(this.left, this.top, this.right, this.bottom);
+  
+  num get width => right - left;
+  set width(num value) => right = left + value;
+  num get height => bottom - top;
+  set height(num value) => bottom = top + value;
+}
+
+void main() {
+  var r1 = Rectangle(5, 10, 25, 30);
+  print('[left, top, width, height] = ${[r1.left, r1.top, r1.width, r1.height]}');
+  print('[width, height] = ${[r1.right, r1.bottom]}');
+  
+  var r2 = Rectangle2(5, 10, 30, 40);
+  print('[left, top, width, height] = ${[r2.left, r2.top, r2.width, r2.height]}');
+  print('[width, height] = ${[r2.right, r2.bottom]}');
+}

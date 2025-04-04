@@ -1,0 +1,15 @@
+enum Status { login, logout }
+
+void main() {
+  var s1 = Status.login;
+  var s2 = Status.logout;
+
+  switch (s2) {
+    case Status.login:
+      print('로그인');
+      break;
+    case Status.logout:
+      print('로그아웃');
+      break;
+  }
+}
